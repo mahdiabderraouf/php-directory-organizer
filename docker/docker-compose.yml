@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  directory-organizer:
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    volumes:
+      - ../src:/app
+    working_dir: /app
