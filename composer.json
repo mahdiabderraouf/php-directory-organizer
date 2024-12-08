@@ -1,0 +1,20 @@
+{
+    "name": "mahdiabderraouf/php-directory-organizer",
+    "description": "Organize messy directories easily using PHP",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MahdiAbderraouf\\PhpDirectoryOrganizer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abderraouf MAHDI"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">= 8.1"
+    }
+}
