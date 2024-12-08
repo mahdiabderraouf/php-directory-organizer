@@ -8,18 +8,20 @@ class ArgumentsParser
 {
     public static function parse(): array
     {
-        $args = getopt('', [
+        $arguments = getopt('', [
             'directory:',
         ]);
 
-        if (!isset($args['directory'])) {
+        if (!isset($arguments['directory'])) {
             throw new InvalidArgumentException('missing argument --directory');
         }
 
-        if (!is_dir($args['directory'])) {
-            throw new InvalidArgumentException('directory ' . $args['directory'] . ' not found');
+        if (!is_dir($arguments['directory'])) {
+            throw new InvalidArgumentException('directory ' . $arguments['directory'] . ' not found');
         }
 
-        return $args;
+        $arguments['directory'] = rtrim($arguments['directory'], '/');
+
+        return $arguments;
     }
 }

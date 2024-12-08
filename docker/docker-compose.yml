@@ -1,8 +1,0 @@
-services:
-  directory-organizer:
-    build:
-      context: .
-      dockerfile: php.dockerfile
-    volumes:
-      - ../:/app
-    working_dir: /app
